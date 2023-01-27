@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <com.google.android.material.card.MaterialCardView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/card"
+         android:padding="16dp"
+    android:layout_marginStart="10dp"
+    android:layout_marginEnd="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:cardBackgroundColor="#efefef"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="11dp"
+
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/img"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:elevation="16dp"
+            android:src="@drawable/pro"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+
+            android:id="@+id/sos_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="5dp"
+            android:elevation="16dp"
+            android:text="Monika"
+            android:textColor="#353d3c"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/img"
+            app:layout_constraintTop_toTopOf="@+id/img" />
+
+        <ImageView
+
+            android:id="@+id/location_icon"
+            android:layout_width="25dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/location"
+            app:layout_constraintStart_toEndOf="@+id/img"
+
+            app:layout_constraintTop_toBottomOf="@+id/sos_text" />
+
+        <TextView
+
+            android:id="@+id/adreesh"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:elevation="16dp"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:text=" G 9-10, 4th Floor, Swaminarayan Complex,, Majuragate,, Surat, Gujarat 395002"
+            android:textColor="@color/darkgrey"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/location_icon"
+            app:layout_constraintTop_toBottomOf="@+id/sos_text" />
+
+
+        <LinearLayout
+            android:id="@+id/bettery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rectegle_round"
+            android:orientation="horizontal"
+            android:padding="5dp"
+            android:paddingStart="10dp"
+            app:layout_constraintEnd_toStartOf="@+id/distance"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/img">
+
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/battery"
+
+
+                app:tint="@color/green_color" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="5dp"
+                android:text="91%"
+                android:textColor="@color/green_color" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/distance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="5dp"
+            android:paddingStart="10dp"
+            app:layout_constraintEnd_toStartOf="@+id/linearLayout"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/bettery"
+            app:layout_constraintTop_toBottomOf="@+id/img">
+
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/distance"
+
+
+                app:tint="@color/darkgrey" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="5dp"
+                android:text="225M"
+                android:textColor="@color/darkgrey" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+
+            android:id="@+id/linearLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="5dp"
+            android:paddingStart="10dp"
+            app:layout_constraintEnd_toStartOf="@+id/imageView"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/distance"
+            app:layout_constraintTop_toBottomOf="@+id/img">
+
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/wifi"
+
+
+                app:tint="@color/darkgrey" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="5dp"
+                android:text="WiFi"
+                android:textColor="@color/darkgrey" />
+
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/round"
+            android:padding="5dp"
+            android:src="@drawable/call"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/bettery" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>
+

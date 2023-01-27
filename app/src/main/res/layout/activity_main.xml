@@ -9,15 +9,17 @@
 
 <FrameLayout
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:id="@+id/container1"
+    android:layout_height="0dp"
+   app:layout_constraintBottom_toTopOf="@+id/bottomnavigation"
+   app:layout_constraintTop_toTopOf="parent"
+   android:id="@+id/container1"
 
     />
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:layout_width="match_parent"
         android:id="@+id/bottomnavigation"
         app:menu="@menu/bottomitemmenu"
-        app:elevation="30dp"
+        app:elevation="15dp"
         android:background="#e4e7e8"
         app:itemIconTint="@drawable/bottombtncolor"
         app:layout_constraintBottom_toBottomOf="parent"
